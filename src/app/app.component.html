@@ -1,16 +1,17 @@
 <input #newTaskElem type="text" [(ngModel)]="newTask" (keyup)=" errorMessage = '';"><br>
 <small>{{errorMessage}}</small> <br>
-<button *ngIf="!isEdit" (click)="add(newTaskElem.value)">Add task</button>
-<button *ngIf="isEdit" (click)="save()">Edit task</button>
-<button *ngIf="isEdit" (click)="cancelEdit()">Cancel task</button>
+<button class="btn btn-primary" *ngIf="!isEdit" (click)="add(newTaskElem.value)">Add task</button>
+<button class="btn btn-primary" *ngIf="isEdit" (click)="save()">Edit task</button>
+<button class="btn btn-primary" *ngIf="isEdit" (click)="cancelEdit()">Cancel task</button>
+
 
 <br>
 
 <ol>
    <li *ngFor="let task of todo;index as i">
-     {{task}}        
-     <button (click)="remove(i)">DELETE</button> 
-     <button (click)="edit(i)">EDIT</button>                                                                            
+     {{task}}         
+     <button class="btn btn-primary" (click)="remove(i)">DELETE</button> 
+     <button class="btn btn-primary" (click)="edit(i)">EDIT</button>                                                                            
    </li>  
    
    

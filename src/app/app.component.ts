@@ -23,7 +23,7 @@ export class AppComponent {
       this.errorMessage = 'Please enter the task.';
       return; // Do not proceed if the task is empty
     }else{
-      this.errorMessage = 'Please enter the task'
+      this.errorMessage = ' '
     }
 
     if (this.todo.includes(newTask)) {
